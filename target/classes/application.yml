@@ -1,0 +1,20 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.66.137:26000/wujy_MIS_22?useUnicode=true&characterEncoding=utf-8
+    username: opengaussuser
+    password: openGauss@123
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #扫描所有mybatis的xml文件
+  configuration:
+    map-underscore-to-camel-case: true
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml  #扫描所有mybatis的xml文件
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
